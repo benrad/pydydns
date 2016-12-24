@@ -1,0 +1,7 @@
+[target]
+target_domain = 
+
+[auth]
+aws_iam_user =   # Just as a reminder; not used.
+aws_access_key_id = 
+aws_secret_access_key = 
