@@ -11,6 +11,8 @@ TARGET_DOMAIN = config.get('target', 'target_domain')
 
 def get_ip():
 	r = requests.get('http://httpbin.org/ip')
+	if r.status_code != 200:
+		raise Exception('Non-200 response, aborting')
 	return r.json()['origin']
 
 
