@@ -107,7 +107,7 @@ def get_ip():
     r = requests.get('http://httpbin.org/ip')
     if r.status_code != 200:
         raise Exception('Non-200 response, aborting. Status code: {0}'.format(r.status_code))
-    return r.json()['origin']
+    return r.json()['origin'].split(",")[0]
 
 
 def main():
